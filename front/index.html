@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/underscore/underscore-min.js"></script>
+    <script src="./node_modules/backbone/backbone-min.js"></script>
+    <script id='user-template' type='template' src="assets/templates/user.html"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="users">
+            <script type="text/template" id="template-Users">
+                <ul></ul>
+            </script>
+            <script type="text/template" id="template-User">
+                <input type="checkbox" class="toggle">
+                <span><%= firstName %> <%= lastName %></span>
+                <button class="delete">delete</button>
+            </script>
+        </div>
+        <form id="users-add">
+            <input type="text" name="firstName">
+            <input type="text" name="lastName">
+            <button>Add</button>
+        </form>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/models/index.js"></script>
+    <script src="js/collections/index.js"></script>
+    <script src="js/views/index.js"></script>
+    <script src="js/router/index.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
