@@ -2,9 +2,10 @@ App.Models.User = Backbone.Model.extend({
     defaults: {
         firstName: '',
         lastName: '',
+        checked: false,
     },
+    urlRoot: 'http://localhost:3000/users',
     toggle() {
-        const { firstName, lastName } = this.toJSON()
-        console.log(`User ${firstName} ${lastName} Toggled`)
+        this.set({checked: !this.get('checked')})
     },
 });
